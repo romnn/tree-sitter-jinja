@@ -1,0 +1,67 @@
+==============
+line statements are content
+==============
+
+# if x
+# endif
+
+---
+
+(source
+  (content))
+
+==============
+line comments are content
+==============
+
+## heading
+text
+
+---
+
+(source
+  (content))
+
+==============
+a line comment's expression is real
+==============
+
+## {{ title }}
+
+---
+
+(source
+  (content)
+  (render_expression
+    (expression
+      (binary_expression
+        (unary_expression
+          (primary_expression
+            (identifier))))))
+  (content))
+
+==============
+line raw is content, and block raw still works
+==============
+
+# raw
+{{ value }}
+# endraw
+{% raw %}{{ kept }}{% endraw %}
+
+---
+
+(source
+  (content)
+  (render_expression
+    (expression
+      (binary_expression
+        (unary_expression
+          (primary_expression
+            (identifier))))))
+  (content)
+  (raw_block
+    (raw_start)
+    (raw_body)
+    (raw_end))
+  (content))

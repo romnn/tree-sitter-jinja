@@ -35,10 +35,6 @@
         },
         {
           "type": "SYMBOL",
-          "name": "inline"
-        },
-        {
-          "type": "SYMBOL",
           "name": "comment"
         },
         {
@@ -2103,14 +2099,6 @@
             {
               "type": "PATTERN",
               "value": "\\{[^#%]"
-            },
-            {
-              "type": "STRING",
-              "value": "#"
-            },
-            {
-              "type": "STRING",
-              "value": "# "
             }
           ]
         }
@@ -2121,53 +2109,31 @@
       "value": "[a-zA-Z_][\\w\\d_]*"
     },
     "comment": {
-      "type": "CHOICE",
+      "type": "SEQ",
       "members": [
         {
-          "type": "SEQ",
-          "members": [
-            {
-              "type": "STRING",
-              "value": "##"
-            },
-            {
-              "type": "PATTERN",
-              "value": "[^\\r\\n]*"
-            },
-            {
-              "type": "PATTERN",
-              "value": "\\r?\\n"
-            }
-          ]
+          "type": "STRING",
+          "value": "{#"
         },
         {
-          "type": "SEQ",
-          "members": [
-            {
-              "type": "STRING",
-              "value": "{#"
-            },
-            {
-              "type": "REPEAT",
-              "content": {
-                "type": "CHOICE",
-                "members": [
-                  {
-                    "type": "PATTERN",
-                    "value": "[^#]+"
-                  },
-                  {
-                    "type": "STRING",
-                    "value": "#"
-                  }
-                ]
+          "type": "REPEAT",
+          "content": {
+            "type": "CHOICE",
+            "members": [
+              {
+                "type": "PATTERN",
+                "value": "[^#]+"
+              },
+              {
+                "type": "STRING",
+                "value": "#"
               }
-            },
-            {
-              "type": "STRING",
-              "value": "#}"
-            }
-          ]
+            ]
+          }
+        },
+        {
+          "type": "STRING",
+          "value": "#}"
         }
       ]
     },
@@ -3434,148 +3400,6 @@
           "name": "raw_end"
         }
       ]
-    },
-    "inline": {
-      "type": "SEQ",
-      "members": [
-        {
-          "type": "STRING",
-          "value": "# "
-        },
-        {
-          "type": "CHOICE",
-          "members": [
-            {
-              "type": "STRING",
-              "value": "if"
-            },
-            {
-              "type": "STRING",
-              "value": "endfor"
-            },
-            {
-              "type": "STRING",
-              "value": "elif"
-            },
-            {
-              "type": "STRING",
-              "value": "else"
-            },
-            {
-              "type": "STRING",
-              "value": "endif"
-            },
-            {
-              "type": "STRING",
-              "value": "endblock"
-            },
-            {
-              "type": "STRING",
-              "value": "endwith"
-            },
-            {
-              "type": "STRING",
-              "value": "endfilter"
-            },
-            {
-              "type": "STRING",
-              "value": "endmacro"
-            },
-            {
-              "type": "STRING",
-              "value": "endcall"
-            },
-            {
-              "type": "STRING",
-              "value": "endset"
-            },
-            {
-              "type": "STRING",
-              "value": "endtrans"
-            },
-            {
-              "type": "STRING",
-              "value": "continue"
-            },
-            {
-              "type": "STRING",
-              "value": "break"
-            },
-            {
-              "type": "STRING",
-              "value": "debug"
-            },
-            {
-              "type": "STRING",
-              "value": "endautoescape"
-            },
-            {
-              "type": "STRING",
-              "value": "do"
-            },
-            {
-              "type": "STRING",
-              "value": "include"
-            },
-            {
-              "type": "STRING",
-              "value": "import"
-            },
-            {
-              "type": "STRING",
-              "value": "set"
-            },
-            {
-              "type": "STRING",
-              "value": "for"
-            },
-            {
-              "type": "STRING",
-              "value": "with"
-            },
-            {
-              "type": "STRING",
-              "value": "call"
-            },
-            {
-              "type": "STRING",
-              "value": "extends"
-            },
-            {
-              "type": "STRING",
-              "value": "macro"
-            },
-            {
-              "type": "STRING",
-              "value": "filter"
-            },
-            {
-              "type": "STRING",
-              "value": "block"
-            },
-            {
-              "type": "STRING",
-              "value": "pluralize"
-            },
-            {
-              "type": "STRING",
-              "value": "trans"
-            },
-            {
-              "type": "STRING",
-              "value": "autoescape"
-            }
-          ]
-        },
-        {
-          "type": "SYMBOL",
-          "name": "_inline_words"
-        },
-        {
-          "type": "PATTERN",
-          "value": "\\r?\\n"
-        }
-      ]
     }
   },
   "extras": [
@@ -3638,10 +3462,6 @@
     {
       "type": "SYMBOL",
       "name": "raw_end"
-    },
-    {
-      "type": "SYMBOL",
-      "name": "_inline_words"
     }
   ],
   "inline": [],

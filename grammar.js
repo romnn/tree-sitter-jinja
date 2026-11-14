@@ -89,12 +89,8 @@ module.exports = {
     attribute_ignore: _ => seq('ignore', 'missing'),
     attribute_context: _ => seq(choice('with', 'without'), 'context'),
 
-    content: _ => prec.right(repeat1(choice(/[^{]/, /\{[^#%]/, '#', '# '))),
+    content: _ => prec.right(repeat1(choice(/[^{]/, /\{[^#%]/))),
     identifier: _ => /[a-zA-Z_][\w\d_]*/,
-    comment: _ =>
-      choice(
-        seq('##', /[^\r\n]*/, /\r?\n/),
-        seq('{#', repeat(choice(/[^#]+/, '#')), '#}'),
-      ),
+    comment: _ => seq('{#', repeat(choice(/[^#]+/, '#')), '#}'),
   },
 };

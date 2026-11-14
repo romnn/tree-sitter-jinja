@@ -104,10 +104,6 @@
           "named": true
         },
         {
-          "type": "inline",
-          "named": true
-        },
-        {
           "type": "macro_block",
           "named": true
         },
@@ -249,10 +245,6 @@
           "named": true
         },
         {
-          "type": "inline",
-          "named": true
-        },
-        {
           "type": "macro_block",
           "named": true
         },
@@ -364,10 +356,6 @@
         },
         {
           "type": "if_block",
-          "named": true
-        },
-        {
-          "type": "inline",
           "named": true
         },
         {
@@ -505,10 +493,6 @@
           "named": true
         },
         {
-          "type": "inline",
-          "named": true
-        },
-        {
           "type": "macro_block",
           "named": true
         },
@@ -599,10 +583,6 @@
           "named": true
         },
         {
-          "type": "inline",
-          "named": true
-        },
-        {
           "type": "macro_block",
           "named": true
         },
@@ -635,56 +615,6 @@
   },
   {
     "type": "else_statement",
-    "named": true,
-    "fields": {}
-  },
-  {
-    "type": "endautoescape_statement",
-    "named": true,
-    "fields": {}
-  },
-  {
-    "type": "endblock_statement",
-    "named": true,
-    "fields": {}
-  },
-  {
-    "type": "endcall_statement",
-    "named": true,
-    "fields": {}
-  },
-  {
-    "type": "endfilter_statement",
-    "named": true,
-    "fields": {}
-  },
-  {
-    "type": "endfor_statement",
-    "named": true,
-    "fields": {}
-  },
-  {
-    "type": "endif_statement",
-    "named": true,
-    "fields": {}
-  },
-  {
-    "type": "endmacro_statement",
-    "named": true,
-    "fields": {}
-  },
-  {
-    "type": "endset_statement",
-    "named": true,
-    "fields": {}
-  },
-  {
-    "type": "endtrans_statement",
-    "named": true,
-    "fields": {}
-  },
-  {
-    "type": "endwith_statement",
     "named": true,
     "fields": {}
   },
@@ -772,10 +702,6 @@
         },
         {
           "type": "if_block",
-          "named": true
-        },
-        {
-          "type": "inline",
           "named": true
         },
         {
@@ -889,10 +815,6 @@
         },
         {
           "type": "if_block",
-          "named": true
-        },
-        {
-          "type": "inline",
           "named": true
         },
         {
@@ -1018,10 +940,6 @@
         },
         {
           "type": "if_statement",
-          "named": true
-        },
-        {
-          "type": "inline",
           "named": true
         },
         {
@@ -1220,11 +1138,6 @@
     }
   },
   {
-    "type": "inline",
-    "named": true,
-    "fields": {}
-  },
-  {
     "type": "inline_trans",
     "named": true,
     "fields": {},
@@ -1339,10 +1252,6 @@
         },
         {
           "type": "if_block",
-          "named": true
-        },
-        {
-          "type": "inline",
           "named": true
         },
         {
@@ -1469,10 +1378,6 @@
         },
         {
           "type": "if_block",
-          "named": true
-        },
-        {
-          "type": "inline",
           "named": true
         },
         {
@@ -1656,10 +1561,6 @@
           "named": true
         },
         {
-          "type": "inline",
-          "named": true
-        },
-        {
           "type": "macro_block",
           "named": true
         },
@@ -1767,10 +1668,6 @@
         },
         {
           "type": "if_block",
-          "named": true
-        },
-        {
-          "type": "inline",
           "named": true
         },
         {
@@ -1897,10 +1794,6 @@
         },
         {
           "type": "if_block",
-          "named": true
-        },
-        {
-          "type": "inline",
           "named": true
         },
         {
@@ -2049,10 +1942,6 @@
           "named": true
         },
         {
-          "type": "inline",
-          "named": true
-        },
-        {
           "type": "macro_block",
           "named": true
         },
@@ -2116,14 +2005,6 @@
   },
   {
     "type": "#",
-    "named": false
-  },
-  {
-    "type": "# ",
-    "named": false
-  },
-  {
-    "type": "##",
     "named": false
   },
   {
@@ -2327,44 +2208,44 @@
     "named": false
   },
   {
-    "type": "endautoescape",
-    "named": false
+    "type": "endautoescape_statement",
+    "named": true
   },
   {
-    "type": "endblock",
-    "named": false
+    "type": "endblock_statement",
+    "named": true
   },
   {
-    "type": "endcall",
-    "named": false
+    "type": "endcall_statement",
+    "named": true
   },
   {
-    "type": "endfilter",
-    "named": false
+    "type": "endfilter_statement",
+    "named": true
   },
   {
-    "type": "endfor",
-    "named": false
+    "type": "endfor_statement",
+    "named": true
   },
   {
-    "type": "endif",
-    "named": false
+    "type": "endif_statement",
+    "named": true
   },
   {
-    "type": "endmacro",
-    "named": false
+    "type": "endmacro_statement",
+    "named": true
   },
   {
-    "type": "endset",
-    "named": false
+    "type": "endset_statement",
+    "named": true
   },
   {
-    "type": "endtrans",
-    "named": false
+    "type": "endtrans_statement",
+    "named": true
   },
   {
-    "type": "endwith",
-    "named": false
+    "type": "endwith_statement",
+    "named": true
   },
   {
     "type": "eq",
